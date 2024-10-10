@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="Pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Java</title>
+    <nav>
+        <a href="index.html">Principal</a>
+        <a href="./tinkercad.html">Tinkercad</a>
+        <a href="c++.html"> C++</a>
+        <a href=" ./java.html">Java</a>
+
+    </nav>
+    <br>
+    <h1> Descrição da linguagem de programação C++</h1>
+    <br>
+    <p>C++ é uma linguagem de programação amplamente usada, especialmente para criar aplicativos. Ela permite que os desenvolvedores trabalhem com diferentes estilos de programação, como a programação genérica, procedural e orientada a objetos (POO).</p>
+    <br>
+    <h2>código C++ da IDE arduíno</h2>
+    <div>
+        <img src="c++.jpg" alt="">
+        <br>
+        <small>Fonte: Autor</small>
+        <br>
+    </div>
+    <br>
+    <pre>// C++ code
+        //
+        int pot2 = 0;
+        
+        int pot1 = 0;
+        
+        int res = 0;
+        
+        void setup()
+        {
+          pinMode(A0, INPUT);
+          Serial.begin(9600);
+          pinMode(A1, INPUT);
+          pinMode(12, OUTPUT);
+        
+          pot1 = 0;
+          pot2 = 0;
+          res = 0;
+          digitalWrite(12, LOW);
+        }
+        
+        void loop()
+        {
+          pot1 += analogRead(A0);
+          Serial.println("pot1-----------------");
+          Serial.println(pot1);
+          pot2 += analogRead(A1);
+          Serial.println("pot2-------------------");
+          Serial.println(pot2);
+          if (pot1 < pot2) {
+            res += (pot1 + pot2);
+            Serial.println("res---------------------");
+            Serial.println(res);
+            digitalWrite(12, HIGH);
+          } else {
+            digitalWrite(12, LOW);
+          }
+          delay(1); // Wait for 1 millisecond(s)
+        }</pre>
+    
+    
+
+</head>
+<body>
+    
+</body>
+</html>
